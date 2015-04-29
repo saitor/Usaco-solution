@@ -66,7 +66,7 @@ int* num; // storage
  * Procedure to check a num valid or not
  * 
  * if valid return 1, otherwise return 0
- * Check every digit is member or num[]
+ * Check every digit is member of num[]
  * */
  int is_num_valid(int un)
  {
@@ -80,13 +80,13 @@ int* num; // storage
 		digit = un % 10;
 	
 		flag = 0;	// init flag
+		
 		// Check digit is member or not
 		for(i=0; i<n; i++) {
 			if(digit == num[i]) {
 				flag = 1;
 				break;
 			}
-			//printf("digit == %d, num[%d] = %d, flag == %d\n", digit, i,  num[i], flag);
 		}
 		// this digit invalid
 		if(flag == 0) break;
@@ -111,7 +111,7 @@ int* num; // storage
  * 3. Check sum vaild or not
  * head digit cant be 0
  * 
- * The partial products must be three digits long!!
+ * 4. The partial products must be three digits long!!
  * */
 int comp_crypt()
 {
