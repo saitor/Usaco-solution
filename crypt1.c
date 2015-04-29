@@ -59,6 +59,9 @@ int* num; // storage
   * */
   void write_crypt(FILE* fp, int answer)
   {
+	// Finish job, free space
+	free(num);
+	  
 	fprintf(fp, "%d\n", answer);
   }
 
